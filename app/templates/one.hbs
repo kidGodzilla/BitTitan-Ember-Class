@@ -1,0 +1,20 @@
+<h1>Route One</h1>
+
+<h3>My Data</h3>
+<ul>
+    {{#each model as |item|}}
+        <li>{{item.name}}</li>
+    {{/each}}
+</ul>
+
+<br>
+{{input value=newItem}}
+
+<button {{action 'addItem' newItem}}>Add Item</button>
+
+<br/><br/><br/>
+
+
+{{#link-to 'index'}}Go Back{{/link-to}}
+
+{{outlet}}
